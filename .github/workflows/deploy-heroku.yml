@@ -2,16 +2,16 @@ name: deploy-Heroku
 
 on:
     push:
-        branches: [ master ]
+        branches: [ main ]
     pull_request:
-        branches: [ master ]
+        branches: [ main ]
     workflow_dispatch:
 
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: Build and deploy the Docker image
           env:
             Heroku_API_KEY: $
