@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apirest.WebApi", "apirest.WebApi\apirest.WebApi.csproj", "{A0ACD038-88CB-4717-819D-982EC8FB7B77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apirest.Domain", "apirest.Domain\apirest.Domain.csproj", "{31F60967-56CC-4B1C-B79F-620DD7DD7031}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apirest.Repository", "apirest.Repository\apirest.Repository.csproj", "{5BC5904A-B816-4EFF-A223-098C32A53916}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{B3451396-70D3-46EE-9665-39B9B02B8447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0ACD038-88CB-4717-819D-982EC8FB7B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0ACD038-88CB-4717-819D-982EC8FB7B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0ACD038-88CB-4717-819D-982EC8FB7B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0ACD038-88CB-4717-819D-982EC8FB7B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F60967-56CC-4B1C-B79F-620DD7DD7031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F60967-56CC-4B1C-B79F-620DD7DD7031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F60967-56CC-4B1C-B79F-620DD7DD7031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F60967-56CC-4B1C-B79F-620DD7DD7031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC5904A-B816-4EFF-A223-098C32A53916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC5904A-B816-4EFF-A223-098C32A53916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC5904A-B816-4EFF-A223-098C32A53916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC5904A-B816-4EFF-A223-098C32A53916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F34B1DC-5775-449B-8CEC-CBA30C2AB958}
+	EndGlobalSection
+EndGlobal
