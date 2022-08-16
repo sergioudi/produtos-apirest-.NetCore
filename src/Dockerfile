@@ -1,19 +1,18 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /src
-COPY . .
-RUN dotnet restore 
-RUN dotnet build --no-restore -c Release -o /app
+# Copy csproj e restaurar as camadas
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+# Copia tudo e builda
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+# Build com a imagem do runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
-COPY --from=publish /app .
-# Padrão de container ASP.NET
-# ENTRYPOINT ["dotnet", "apirest.WebApi.dll"]
-# Opção utilizada pelo Heroku
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet apirest.WebApi.dll
+COPY --from=build-env /app/out .
+
+# Usa porta dinâmica do Heroku
+CMD ASPNETCORE_URLS="http://*:$PORT" dotnet apirest.WebApi.dll 
