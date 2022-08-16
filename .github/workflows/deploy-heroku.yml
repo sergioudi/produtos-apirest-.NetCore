@@ -14,8 +14,8 @@ jobs:
         - uses: actions/checkout@v3
         - name: Build and deploy the Docker image
           env:
-            Heroku_API_KEY: $
-            Heroku_APP_NAME: $
+            Heroku_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+            Heroku_APP_NAME: ${{ secrets.Heroku_APP_NAME }}
           run: |
             docker login --username=_ --password=$Heroku_API_KEY registry.Heroku.com
             Heroku container:push web -a $Heroku_APP_NAME
