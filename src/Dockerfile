@@ -2,11 +2,9 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /app
 
 # Copy csproj e restaurar as camadas
-COPY *.csproj ./
+COPY . ./
 RUN dotnet restore
 
-# Copia tudo e builda
-COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Build com a imagem do runtime
